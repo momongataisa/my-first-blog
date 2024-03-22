@@ -13,16 +13,15 @@
         <div class="page-header">
             <h1> <a href="/">Django Girls Blog</a></h1>
         </div>
-        <p> My name is Ito </p>
 
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
                     {% for post in posts %}
                         <div class="post">
-                            <div class="date">
+                            {% comment %} <div class="date">
                                 <p>published: {{ post.published_date }}</p>
-                            </div>
+                            </div> {% endcomment %}
                             <h2><a href="">{{ post.title }}</a></h2>
                             <p>{{ post.text|linebreaksbr }}</p>
                         </div>
